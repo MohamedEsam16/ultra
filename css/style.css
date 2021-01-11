@@ -1,0 +1,799 @@
+/*
+    =====================
+        Public Style
+    =====================
+*/    
+*,*:after,*:before /*(All, All After, All Before)*/
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+
+}
+body
+{
+    font-family: 'Raleway', sans-serif;
+}
+.container
+{
+    width:85%;
+    margin:auto;
+}
+ul
+{
+    list-style: none;
+}
+.clearfix
+{
+    clear:both;
+}
+/*
+    =====================
+       NAVBAR Style
+    =====================
+*/    
+.navbar
+{
+    padding:20px 0;
+    overflow: hidden;
+    position:relative;
+}
+
+.navbar .logo
+{
+    width:50%;
+    float:left;
+}
+
+.navbar .logo h2
+{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.navbar input,.navbar label
+{
+    position:absolute;
+    top:10px;
+    right:15px;
+}
+
+.navbar input
+{
+    display:none;
+}
+
+.navbar input:checked ~ ul
+{
+    display:block;
+}
+
+.navbar input:checked ~ label
+{
+
+    background-image: url('../images/Navbar/close.png'); 
+}
+
+
+.navbar label
+{
+    display:block;
+    width:15px;
+    height:20px;
+    background: url('../images/Navbar/open.png') no-repeat ;
+    background-size: cover;
+    padding:20px;
+    cursor:pointer;
+}
+
+.navbar ul
+{
+    width:50%;
+    float:left;
+}
+
+.navbar ul li
+{
+    display:inline-block;
+}
+
+.navbar ul li a
+{
+    text-decoration: none;
+    display:block;
+    padding:10px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:#000;
+    transition:color .2s ease-in-out;
+}
+
+.navbar ul li a:hover
+{
+    color:#eb5424;
+}
+
+
+/* 
+    ======================
+    Media For Navbar Style
+    ======================    
+*/
+@media (min-width:992px)
+{
+    .navbar label
+    {
+        display:none;
+    }
+}
+@media (max-width:991px)
+{
+    .navbar .logo,.navbar ul
+    {
+        width:100%;
+        float:none;
+        text-align: center;
+    
+    }
+    .navbar ul
+    {
+        margin-top:20px;
+        display:none
+    }
+    .navbar ul li
+    {
+        display:block;
+    }
+}
+
+
+
+/*
+    ================
+      Home Section
+    ================
+*/
+.home
+{
+    background-image: url('../images/Home/home-bg.jpg');
+    background-size: cover;
+    height:600px;
+    background-position: center center;
+    background-attachment: fixed;
+    text-align: center;
+    position:relative;
+
+}
+.home .information
+{
+    position:absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.home .information h2
+{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+    color:#5f5f5f;
+    margin-bottom: 20px;
+}
+.home .information h4
+{
+    font-size: 30px;
+    text-transform: uppercase;
+    color:#eb5424;
+    margin-bottom: 50px;
+}
+.home .information p
+{
+    font-size: 16px;
+    line-height:28px;
+    color:#525657;
+    margin-bottom: 30px;
+}
+.home .information p span
+{
+    color:#525657;
+    font-weight: bold;
+}
+.home .information button
+{
+    padding:15px 50px;
+    font-size: 20px;
+    background-color: #eb5424;
+    color:#FFF;
+    outline:none;
+    font-weight:bold;
+    border:0;
+    transition:all .5s ease-in-out;
+}
+.home .information button:hover
+{
+    color:#eb5424;
+    background-color: #FFF;
+}
+
+@media (max-width:768px)
+{
+    .home .information h2
+    {
+        font-size:30px
+    }
+    .home .information p
+    {
+        width:500px;
+    }
+}
+ /* 
+    ======================
+         Work Section
+    ======================    
+*/
+.work
+{
+    padding:10% 0;
+    height:auto
+}
+.work h2
+{
+    font-size:60px;
+    text-transform: uppercase;
+    color:#303030;
+    font-weight: bold;
+    margin-left:100px;
+    margin-bottom: 40px;;
+}
+.work h2 span
+{
+    font-weight: normal;
+}
+.work .card
+{
+    width:31%;
+    border:1px solid #adadad;
+    padding:100px 0;
+    float:left;
+    height:500px;
+    text-align: center;
+    letter-spacing:1px;
+    margin-left: 2%;
+    transition:all .5s ease-in-out;
+}
+.work .card:hover
+{
+    border:1px solid #eb5424;
+}
+.work .card:hover i
+{
+    color:#eb5424;
+}
+.work .card:hover h4
+{
+    color:#eb5424;
+
+}
+
+.work .card i
+{
+    color:#888;
+    margin-bottom:60px ;
+    transition:color .5s ease-in-out;
+}
+.work .card h4
+{
+    font-size:25px;
+    color:#adadad;
+    text-transform: uppercase;
+    margin-bottom:90px;
+    transition:color .5s ease-in-out;
+
+}
+.work .card hr
+{
+    width:50%;
+    margin:auto;
+    opacity:.3;
+    margin-top: -50px;
+
+}
+.work .card p
+{
+   font-size:17px;
+   color:rgb(100, 98, 98);
+   padding:15px;
+   margin-top:35px;
+}
+
+@media (max-width:900px)
+{
+    .work .card
+    {
+        width:100%;
+        float:none;
+    }
+}
+ /* 
+    ======================
+      Portfolio Section
+    ======================    
+*/
+.portfolio
+{
+    background-color: #f8f8f8;
+    padding-top:20px;
+    overflow:hidden;
+}
+.portfolio h2
+{
+    text-align: center;
+    font-size: 30px;
+    color:#303030;
+    text-transform: uppercase;
+    margin-top: 70px;
+}
+.portfolio h2 span
+{
+    font-weight: normal;
+}
+.portfolio ul
+{
+    text-align: center;
+    padding: 25px 0;
+}
+.portfolio ul li
+{
+    display:inline-block;
+    padding:10px 15px;
+    color:#b9b9b9;
+    font-size: 18px;
+    transition:all .4s ease-in-out;
+    cursor: pointer;
+    margin-left:5px;
+}
+.portfolio ul li.active
+{
+    color:#FFF;
+    background-color: #eb5424; 
+}
+.portfolio ul li:hover
+{
+    color:#FFF;
+    background-color: #eb5424;
+}
+.box div
+{
+    width:25%;
+    float:left;
+    font-size: 0;
+    position: relative;
+}
+.box div img
+{
+    width:100%;
+}
+.box div p
+{
+    font-size: 15px;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background: rgba(235,84,37,.6);
+    color:#FFF;
+    text-align: center;
+    opacity:0;
+    transition: .3s ease-in-out;
+    line-height: 28px;
+}
+.box div p:hover
+{
+    opacity:1;
+}
+
+.box div p span
+{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:60%;
+}
+@media (max-width:575px) 
+{
+    .portfolio ul li
+    {
+        display: block;
+        margin:auto;
+        margin-top:10px;
+    }
+    .box div
+    {
+        width:100%;
+        float:none;
+    }
+}
+@media (min-width:575px) and (max-width:900px)
+{
+    .box div
+    {
+        width:100%;
+        float:none;
+    }
+}
+
+ /* 
+    =====================
+    profile-skill Section
+    =====================   
+*/
+.profile-skill
+{
+    padding:50px 0;
+    overflow:hidden;
+}
+.profile-skill .profile,.profile-skill .skill
+{
+    width:50%;
+    float:left;
+}
+.profile-skill .profile h2,.profile-skill .skill h2
+{
+    font-size: 60px;
+    color:#303030;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top:70px;
+    margin-bottom: 40px;
+}
+.profile-skill .profile h2 span,.profile-skill .skill h2 span
+{
+    font-weight: normal;
+}
+.profile-skill .profile li
+{
+    margin-bottom: 10px;
+    color:#878286;
+}
+.profile-skill .profile li span
+{
+    width:100px;
+    display:inline-block;
+    color:#535152;
+    font-weight: bold;
+}
+.profile-skill .profile li .git
+{
+    color:#eb5424;
+    font-weight: normal;
+    text-decoration: none;
+}
+.profile-skill .skill p
+{
+    color:#878286;
+    font-size: 15px;
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+
+.profile-skill .skill .bar
+{
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.profile-skill .skill .bar .title
+{
+    float:left;
+}
+.profile-skill .skill .bar .perc
+{
+    float:right;
+    margin-right:70px;
+}
+.profile-skill .skill .bar .parent
+{
+    height:2px;
+    background: #f8f8f8;
+    clear:both; /*عشان يمسح الفلوت اللي واخده التايتل*/
+    position:relative;
+}
+.profile-skill .skill .bar .parent span
+{
+    position:absolute;
+    display:block;
+    background-color: #eb5424;
+    top:0;
+    left:0;  
+    height:100%;
+}
+.profile-skill .skill .bar .parent .sp1
+{
+    width:100%;
+}
+.profile-skill .skill .bar .parent .sp2
+{
+    width:90%;
+}
+.profile-skill .skill .bar .parent .sp3
+{
+    width:80%;
+}
+
+@media (max-width:900px)
+{
+    .profile-skill .profile,.profile-skill .skill
+    {
+        width:100%;
+        float:none;
+    }
+}
+
+ /* 
+    =====================
+      Creative Section
+    =====================   
+*/
+.creative
+{
+    height:500px;
+    background-image: url('../images/creative/about-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center  ;
+}
+.creative .creative-info
+{
+    padding-top:50px;
+    width:50%;
+    float:right;
+}
+.creative .creative-info h2
+{
+    font-size: 36px;
+    color:#303030;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.creative .creative-info h2 span
+{
+    font-weight: normal;
+}
+.creative .creative-info h1
+{
+    font-size: 36px;
+    color:#eb5424;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+
+}
+.creative .creative-info h1 span
+{
+    font-weight: normal;
+}
+.creative .creative-info p
+{
+    color:#777577;
+    line-height: 28px;
+    font-size: 16px;
+}
+
+@media (max-width:900px)
+{
+   
+    .creative .creative-info
+    {
+        width:100%;
+        float:none;
+    }
+}
+ /* 
+    =====================
+      Social Section
+    =====================   
+*/
+.social
+{
+    height:auto;
+    overflow:hidden;
+}
+.social .social-card
+{
+    width:33.33333333333333%;
+    float:left;
+    padding:100px 0 100px 60px;
+}
+.social .social-card i
+{
+    width: 55px;
+    height: 55px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 55px;
+    float: left;
+    margin-right: 15px;
+    color: rgb(112, 112, 112);
+}
+.social .social-card p
+{
+    text-transform: uppercase;
+    color:#FFF;
+}
+.social .social-card p .info1
+{
+    margin-bottom:8px;
+    display:block;
+    font-weight: bold;
+    font-size: 18px;
+}
+.social .social-card p .info2
+{
+    font-weight:normal;
+    display:block;
+    font-size:24px;
+}
+.social .social-card.face
+{
+    background-color: #3b5998;
+}
+.social .social-card.twit
+{
+    background-color: #498cbf;
+}
+.social .social-card.pin
+{
+    background-color: #cc2127;
+}
+.social .social-card
+{
+    transition: all .5s ease-in-out;
+}
+.social .social-card:hover
+{
+    background-color: #202020;
+}
+
+
+@media (max-width:900px)
+{
+    .social .social-card
+{
+    width:100%;
+    float:none;
+    padding:100px 0 100px 60px;
+}
+}
+ /* 
+    =====================
+        Drop Section
+    =====================   
+*/
+.drop
+{
+    padding:60px 0;
+    text-align: center;
+}
+.drop h1
+{
+    font-size: 60px;
+    color:#303030;
+    text-transform: uppercase;
+}
+.drop span
+{
+    font-weight:normal;
+}
+.drop form
+{
+    padding-top:50px;
+    width:80%;
+    margin:auto;
+}
+.drop form input,.drop form textarea
+
+{
+    border:1px solid #303030;
+    margin-bottom: 10px;
+    padding:5px;
+    border-radius: 2px;
+    outline:none;
+}    
+.drop form input
+{
+    height:35px;
+}
+.drop form .form-input
+{
+    overflow: hidden;
+}
+.drop form .form-input input
+{
+    width:49%;
+}
+.drop form .form-input input[type=text]
+{
+    float:left;
+}
+.drop form input.shoot
+{
+    width:70%;
+    margin:auto;
+    display:block;
+    background-color: #FFF;
+    cursor:pointer
+}
+.drop form .form-input input[type=email]
+{
+    float:right;
+}
+.drop form input.sub
+{
+    width:100%
+}
+.drop form textarea
+{
+    width:100%;
+}
+.drop form input,.drop form textarea,.drop form input.shoot
+{
+    transition: all .5s ease-in-out;
+}
+.drop form input:hover,.drop form textarea:hover,.drop form input.shoot:hover
+{
+    background-color: #202020;
+    color:#FFF;
+}
+.drop form input:focus,.drop form textarea:focus,.drop form input.shoot:focus
+{
+    background-color: #202020;
+    color:#FFF;
+}
+
+@media (max-width:900px)
+{
+    .drop form
+    {
+        width:100%;
+        margin:auto;
+    }
+    .drop form .form-input input
+    {
+        width:100%;
+    }
+    .drop form input.shoot
+    {
+        width:100%;
+        margin:auto;
+    }
+}
+
+ /* 
+    =====================
+        Footer Section
+    =====================   
+*/
+.footer
+{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.footer p
+{
+    color:#76736c;
+}
+.footer p a
+{
+    text-decoration: none;
+    color:#eb5424;
+}
+.footer p a:hover
+{
+    text-decoration: underline;
+    color:#90a6b9;
+}
+
+
+
+
